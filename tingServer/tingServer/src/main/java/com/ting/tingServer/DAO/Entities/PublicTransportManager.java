@@ -5,19 +5,21 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.*;
-import java.util.List;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 @Entity
-@Setter @Getter @AllArgsConstructor @NoArgsConstructor
-public class Traveler {
+@Setter
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor
+public class PublicTransportManager {
 
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Integer id;
-
-    @OneToOne
-    private TravelCard travelCards;
 
     private String name;
     private String password;
@@ -26,5 +28,4 @@ public class Traveler {
     private String phoneNumber;
     private String district;
     private Integer postalCode;
-
 }
