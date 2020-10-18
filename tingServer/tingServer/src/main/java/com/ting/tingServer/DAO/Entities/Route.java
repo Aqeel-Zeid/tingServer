@@ -1,4 +1,4 @@
-package com.ting.tingServer.Model.FareSystems.Bus.Regular;
+package com.ting.tingServer.DAO.Entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -11,12 +11,14 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-@Setter @Getter @NoArgsConstructor @AllArgsConstructor
-public class Bus {
+@NoArgsConstructor @Setter @Getter @AllArgsConstructor
+public class Route {
 
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Integer id;
-    private String numberPlate;
+
+    private Integer routeNumber;
+    private Integer maxCharge;
 
 }

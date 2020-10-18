@@ -8,7 +8,7 @@ import lombok.Setter;
 import javax.persistence.*;
 
 
-@Entity
+
 @Setter @Getter @NoArgsConstructor @AllArgsConstructor
 public class Halt {
 

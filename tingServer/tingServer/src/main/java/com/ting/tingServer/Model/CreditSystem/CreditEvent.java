@@ -7,6 +7,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.sql.Timestamp;
+import java.util.Calendar;
 import java.util.Date;
 
 @Entity
@@ -22,8 +24,9 @@ public class CreditEvent {
 
     String type ; // CREDIT or DEBIT
     String description ;
+    Double amount;
 
-    @Temporal(TemporalType.DATE)
+    @Temporal(TemporalType.TIMESTAMP)
     Date timeStamp;
 
     Integer finalBalance;
